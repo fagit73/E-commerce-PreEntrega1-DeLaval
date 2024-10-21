@@ -1,0 +1,23 @@
+.itemdetail img{
+    width: 50vh;
+    height: 70vh;
+    align-content: center;
+    align-items: center;
+
+}
+
+.itemdetail h2{
+    font-size: 20px;
+    color: blueviolet;
+    margin-left: 10px;
+    padding-left: 10px;
+
+
+}
+
+.itemdetail p{
+    font-size: 18px;
+    color: blueviolet;
+    margin-left: 10px;
+    padding-left: 10px;
+}
