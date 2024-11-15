@@ -1,0 +1,291 @@
+/* Estilos generales para la sección del carrito */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  /* Contenedor principal que tiene el contenido del carrito */
+.cart {
+    flex: 1;  /* Hace que este contenedor ocupe todo el espacio disponible entre el header y el footer */
+    padding: 20px;
+  }
+
+  /*
+.cart {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  */
+  
+  .title-cart {
+    text-align: center;
+    font-size: 1.6rem;
+    color: blueviolet;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el contenedor de productos en el carrito */
+  .productosencarrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .image-cart {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 8px;
+  }
+  
+  .text-item-cart {
+    font-size: 14px;
+    color: blueviolet;
+    margin: 5px 0;
+  }
+  
+  /* Botones de borrar producto */
+  .borrarproducto {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .borrarproducto:hover {
+    background-color: blueviolet;
+  }
+  
+  /* Información del carrito */
+  .info-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .preciototal {
+    font-size: 1.2rem;
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .borrarcarrito,
+  .Terminarmicompra {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .borrarcarrito {
+    background-color: blue;
+    margin-right: 15px;
+  }
+  
+  .borrarcarrito:hover {
+    background-color: blueviolet;
+  }
+  
+  /* Botón "Terminar mi compra" */
+.Terminarmicompra {
+    background-color: blueviolet;
+    font-size: 16px; /* Reducido para que sea más proporcional */
+    padding: 10px 20px; /* Ajustado para que el botón no sea tan grande */
+    width: 200px; /* Tamaño consistente */
+    text-align: center;
+    text-decoration: none; /* Para quitar el subrayado por defecto */
+    border-radius: 8px;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Añadido espacio superior para separar de otros elementos */
+  }
+  
+  .Terminarmicompra:hover {
+    background-color: blue; /* Efecto hover más suave */
+  }
+
+  .empty-cart {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .title-cart, .title-empty-cart {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Botones del carrito */
+  .botonvolveralinicio {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .botonvolveralinicio:hover {
+    background-color: #6a1abd;
+  }
+
+  
+
+  
+  /* Media Queries para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .productosencarrito {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .image-cart {
+      width: 100px;
+      height: 120px;
+    }
+  
+    .text-item-cart {
+      font-size: 13px;
+    }
+  
+    .borrarproducto,
+    .borrarcarrito,
+    .Terminarmicompra {
+      width: 100%;
+      font-size: 14px;
+      padding: 12px 20px;
+      margin-top: 10px;
+    }
+  
+    .info-cart {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .preciototal {
+      margin-bottom: 10px;
+    }
+
+    .productosencarrito {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .cart {
+        padding: 15px;
+      }
+
+
+
+  }
+  
+  @media (max-width: 480px) {
+    .title-cart {
+      font-size: 1.6rem;
+    }
+  
+    .image-cart {
+      width: 90px;
+      height: 110px;
+    }
+  
+    .productosencarrito {
+      padding: 12px;
+    }
+  
+    .text-item-cart {
+      font-size: 12px;
+    }
+  
+    .borrarproducto,
+    .borrarcarrito,
+    .Terminarmicompra {
+      padding: 10px 18px;
+      font-size: 12px;
+    }
+  
+    .Terminarmicompra {
+      font-size: 14px;
+      width: 100%;
+    }
+  
+    .info-cart {
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+
+  /* Estilos para el botón de SweetAlert */
+.swal-button {
+    background-color: #8A2BE2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .swal-button:hover {
+    background-color: #6a1abd; /* Hover color */
+  }
+  
+  /* Asegúrate de que la estructura sea responsiva */
+  .cart, .empty-cart {
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  .botonvolveralinicio {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .botonvolveralinicio:hover {
+    background-color: #6a1abd;
+  }
+  
+  /* Hacer que el layout sea flexible */
+  .productosencarrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .productosencarrito {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  

@@ -1,40 +1,41 @@
-import React, { useState } from "react";
-import "./ItemCount.css";
+import { useState } from "react"
+import { Link } from 'react-router-dom'
+import "./ItemCount.css"
 
-const ItemCount = ({stock,initial, onAdd}) => {
-  const [numero, setNumero] = useState(initial);
+const ItemCount = ({ stock, addProduct }) => {
+  const [count, setCount] = useState(1)
 
-  const handleSumar = () => {
-    if (numero<stock){
-      setNumero(numero + 1);
+  const handleClickRest = () => {
+    if(count > 1){
+      //modificamos nuestro estado
+      setCount(count - 1)
     }
-    
-  };
-
-  const handleRestar = () => {
-    if (numero > 1) {
-      setNumero(numero - 1);
+  }
+//Los eventos llevan la palabra handle y el nombre del evento en este caso Click
+  const handleClickAdd = () => {
+    if(count < stock){
+      // nuestra funcion para sumar
+      setCount(count + 1)
     }
-  };
-  
-  const handleAgregar = () =>{
-    if (stock>0 && numero > 0){
-      onAdd(numero);
-    }
-
-  };
+  }
 
   return (
-    <div>
-      <div className="itemCount-container">
-        <button className="btn" onClick={handleRestar}  disabled={numero <= 1}>-</button>
-        <p className="numero-cart">{numero}</p>
-        <button className="btn" onClick={handleSumar} disabled={numero >= stock}>+</button>
-        <button onClick={handleAgregar} className="btn-agregar">Agregar al Carrito</button>
-      </div>
-      
-    </div>
-  );
-};
 
-export default ItemCount;
+    <div className="updowncontador">
+  <div className="btn-container">
+    <button onClick={handleClickRest}>-</button>
+    <p>{count}</p>
+    <button onClick={handleClickAdd}>+</button>
+  </div>
+  <button className="agregaralcarrito" onClick={() => addProduct(count)}>
+    Agregar al carrito
+  </button>
+  <Link to="/" className="volver-inicio">
+    Volver al inicio
+  </Link>
+  </div>  
+   
+
+  )
+}
+export default ItemCount

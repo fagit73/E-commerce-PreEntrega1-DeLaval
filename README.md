@@ -1,8 +1,10 @@
-# React + Vite
+# Ecommerce denominado Ro.less con React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="https://th.bing.com/th/id/OIP.K-4RqDC6zFrpAG31ayDDOgHaHa?rs=1&pid=ImgDetMain" width="50" />
 
-Currently, two official plugins are available:
+## Descripción: Tienda de indumentaria deportiva femenina
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Dependencias utilizadas
+
+`firebase` `react-router-dom` `@colisweb/rescript-react-icons-ri` `react` `react-toastify` `yup` `@fortawesome/free-brands-svg-icons` `@fortawesome/react-fontawesome` `sweetalert2` `
+

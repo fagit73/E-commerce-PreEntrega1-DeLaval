@@ -12,3 +12,8 @@
 body{
     background-color: rgb(250, 250, 244);
 }
+
+.container-app{
+    margin-top: 0px;
+    padding-top: 0px;
+}

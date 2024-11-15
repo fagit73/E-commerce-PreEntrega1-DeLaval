@@ -1,0 +1,292 @@
+/*** Estilos formulario de contacto ***/
+.centraformulario {
+    font-family: Poppins, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form{
+    padding: 5opx 55px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    margin: 50px 50px;
+    
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2{
+    color: blue;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+
+label{
+    color: rgb(17, 17, 143);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+input, texarea{
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #EDFFF0;
+    border: 2px solid #F0FAF1;
+    color: #283629;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #b5cab6;
+}
+
+.form-txt{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-txt a {
+    color: #76b28e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn {
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 25PX;
+    background-color: blueviolet;
+    box-shadow: 0 0 20px rgba(254, 0, 241, 0.4);
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    background-color: rgba(254, 0, 241, 0.4);
+
+}
+
+
+/*La orden se subio correctamente */
+
+.go__home{
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 25PX;
+    background-color: blueviolet;
+    box-shadow: 0 0 20px rgba(254, 0, 241, 0.4);
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: block;
+    margin: 30px 10px;
+    
+
+}
+.go__home:hover{
+    background-color: rgba(254, 0, 241, 0.4);
+
+}
+
+@media(max-width:991px) {
+    form{
+        padding: 50px 33px;
+        width: 70vh;
+        
+        
+    }
+
+    input {
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    form{
+        padding: 50px 33px;
+        width: 80vw; 
+
+    }
+
+    input {
+        padding: 15px;
+    }
+
+    
+.btn {
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 25PX;
+    background-color: blueviolet;
+    box-shadow: 0 0 20px rgba(254, 0, 241, 0.4);
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+.go__home{
+    font-size: 12px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 25PX;
+    background-color: blueviolet;
+    box-shadow: 0 0 20px rgba(254, 0, 241, 0.4);
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: block;
+    margin: 30px 10px;
+    
+
+}
+.go__home:hover{
+    background-color: rgba(254, 0, 241, 0.4);
+
+
+}
+
+h2{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.order__p{
+    font-size: 14px;
+}
+
+}
+
+
+
+
+
+/*** Fin Estilos formulario de contacto ***/
+
+
+
+
+/**Texto se subio la orden correctamente **/
+
+.order{
+    align-content: center;
+    margin-left: 25%;
+}
+
+.order__up .order__p{
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+
+
+/* Estilo para la ventana emergente de SweetAlert2 */
+.swal-popup {
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px; /* Establecemos un ancho por defecto */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilo para el título */
+  .swal-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #28a745; /* Verde para el éxito */
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el texto de contenido */
+  .swal-content {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo para el botón */
+  .swal-button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efecto hover sobre el botón */
+  .swal-button:hover {
+    background-color: #218838;
+  }
+  
+  /* Hacer la alerta responsiva */
+  @media (max-width: 576px) {
+    .swal-popup {
+      width: 90%;  /* Hacer que la ventana ocupe más espacio en pantallas pequeñas */
+      padding: 20px;
+    }
+    
+    .swal-title {
+      font-size: 20px;
+    }
+    
+    .swal-content {
+      font-size: 14px;
+    }
+  
+    .swal-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  

@@ -1,53 +1,119 @@
-div h2{
-    text-align: center;
-    font-family: Arial, sans-serif, helvetica;;
-    color: blue;
-    margin-top: 15px;
+/* Estilos generales de la página */
+.itemlistcontainer {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Contenedor de la lista de items */
+.itemlistcontainer .itemlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
 
-.itemlistcontainer{
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
+/* Estilos generales para las tarjetas de productos */
+.itemlistcontainer .item {
+  width: calc(25% - 20px);  /* 4 columnas por defecto con espacio */
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Estilos para las imágenes de los productos */
+.itemlistcontainer .item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+/* Efecto hover para tarjetas y imágenes */
+.itemlistcontainer .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.itemlistcontainer .item img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para los textos de las tarjetas */
+.item .item-text {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Estilos para el nombre del producto y el precio */
+.item .item-text:nth-child(1) {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item .item-text:nth-child(2) {
+  font-size: 14px;
+  color: #8A2BE2; /* Color azulvioleta para el precio */
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Estilos para las pantallas pequeñas */
+@media (max-width: 700px) {
+  .itemlistcontainer .item {
+    width: calc(50% - 20px);  /* 2 columnas para pantallas pequeñas */
+    padding: 15px;
+    margin: 10px 0;
   }
-  .itemlistcontainer .itemlist{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .itemlistcontainer .item{
-    width: 20%;
-    margin: 3% 6%;
-    padding: 2%;
-    border: 2px solid rgb(37, 37, 37);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .item .imagen-item{
+
+  /* Imágenes más grandes para móviles */
+  .itemlistcontainer .item img {
     width: 100%;
-    border-radius: 5%;
-    background-color: rgb(39, 39, 39);
+    height: auto;
+    max-width: 300px;
+    margin-bottom: 15px;
   }
-  .item .item-text{
-    padding: 1% 0;
-    text-align: center;
+
+  /* Texto ajustado para pantallas pequeñas */
+  .item .item-text {
     font-size: 12px;
   }
-
-  @media (max-width: 700px) {
-    .itemlistcontainer  .item {
-      
-      display: flex;
-      flex-direction: column;
-      background: white;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      
-      
-    }
-    
 }
+
+/* Para pantallas muy pequeñas (móviles estrechos) */
+@media (max-width: 400px) {
+  .itemlistcontainer .item {
+    width: 100%;  /* Una tarjeta por fila */
+    padding: 10px;
+  }
+
+  .itemlistcontainer .item img {
+    max-width: 100%;
+  }
+
+  .item .item-text {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+
+
+
+
+
+
+
+

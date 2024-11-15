@@ -1,23 +1,85 @@
-.itemdetail img{
-    width: 50vh;
-    height: 70vh;
-    align-content: center;
+/* Estilos generales para la sección */
+.detail {
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro de la sección */
+    align-items: center; /* Centra verticalmente los elementos */
+    height: auto; /* Permite que la sección ajuste su altura en función del contenido */
+    padding: 40px 20px; /* Añade margen alrededor de la sección */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
+    gap: 20px; /* Espacio entre los elementos (imágenes y texto) */
+  }
+  
+  /* Contenedor de imágenes */
+  .images-detail-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
-
-}
-
-.itemdetail h2{
-    font-size: 20px;
-    color: blueviolet;
-    margin-left: 10px;
-    padding-left: 10px;
-
-
-}
-
-.itemdetail p{
-    font-size: 18px;
-    color: blueviolet;
-    margin-left: 10px;
-    padding-left: 10px;
-}
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 100%; /* Asegura que ocupe toda la altura disponible */
+    flex-shrink: 0; /* Evita que el contenedor se reduzca */
+  }
+  
+  /* Contenedor de la imagen principal */
+  .main-image {
+    width: 80%; /* La imagen ocupará el 80% del ancho del contenedor */
+    height: 80%; /* La imagen ocupará el 80% de la altura del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que la imagen se desborde si no tiene la misma relación de aspecto */
+  }
+  
+  .main-image img {
+    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor */
+    height: 100%; /* La imagen ocupa el 100% de la altura de su contenedor */
+    object-fit: contain; /* Ajusta la imagen para que toda sea visible sin recortarla */
+    display: block; /* Elimina los márgenes extra que puede generar una imagen inline */
+  }
+  
+  /* Contenedor de texto */
+  .text-detail-container {
+    max-width: 600px; /* Limita el ancho del contenedor de texto */
+    padding: 20px;
+    flex: 1;
+    margin-left: 20px; /* Añade un margen a la izquierda del texto para separarlo de la imagen */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
+  }
+  
+  .title-detail {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-detail {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .detail {
+      flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+      align-items: center;
+      gap: 20px; /* Añade separación entre la imagen y el texto */
+    }
+  
+    .main-image {
+      width: 90%; /* La imagen ocupará el 90% del ancho en pantallas pequeñas */
+      height: 60%; /* En pantallas pequeñas, la imagen ocupará el 60% de la altura */
+    }
+  
+    .text-detail-container {
+      max-width: 100%; /* El texto ocupará el 100% del ancho */
+      padding: 10px;
+      margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+    }
+  
+    .title-detail {
+      font-size: 1.5rem; /* Ajuste del tamaño del título en pantallas pequeñas */
+    }
+  
+    .text-detail {
+      font-size: 0.9rem; /* Ajuste del tamaño del texto en pantallas pequeñas */
+    }
+  }
+  
