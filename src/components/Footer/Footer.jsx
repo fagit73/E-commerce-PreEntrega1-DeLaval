@@ -24,7 +24,7 @@ export default function Footer() {
         <footer className='footer' id='contact-us'>
             <div className='footer__container'>
                 <img 
-                    src='../src/assets/logo.jpg' 
+                    src='https://i.postimg.cc/Gh9YpFjs/logo.jpg' 
                     alt='Ro.less' 
                     className='footer__logo' 
                 />

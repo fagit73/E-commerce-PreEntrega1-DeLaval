@@ -8,7 +8,7 @@ export default function Header() {
         <header className='header' id='home'>
             <img 
                 className='header__img' 
-                src='../public/img/Carousel1.jpeg' 
+                src='https://i.postimg.cc/c1FwZ9fS/Carousel1.jpg' 
                 alt='Indumentaria Femenina'
             />
             <section className='header__text'>
